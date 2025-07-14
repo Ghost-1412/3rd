@@ -1,0 +1,26 @@
+Design, Deploy, and Manage a microservices architecture on your local machine using Docker  and docker-compose 
+
+--run the docker desktop in the background
+
+1) create a root directory and put the following contents
+	
+     - microservice
+	+ app
+	   -app.py
+	   -Dockerfile
+	   -requirements.txt
+	+docker-compose.yml
+
+2) navigate to the root directory (microservice) and open cmd 
+
+3) run the setup : docker-compose up --build 
+	-- after running check on localhost 5000
+
+4) to push the image 
+    -- docker images (shows all images)
+    -- create tag for image you want to push (or) simply create an image (docker build -t flaskapp . ) in root directory
+    
+    create and push tag
+    -- docker login  (make sure you have docker desktop logged in and running in background)
+    -- docker tag <image> <usrname>/<tagname> : docker tag flaskapp vivekpradhan22/ex_app
+    -- docker push <usrname>/<tagname> :  docker push vivekpradhan22/ex_app
